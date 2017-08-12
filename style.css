@@ -297,6 +297,9 @@ body{
 }
 #header-img{
 	width: 100%;
+	border:1px;
+	border-style:groove;
+  	border-color:#ff0000 #0000ff;
 }
 #header-text-img{
 	width: 13%;
