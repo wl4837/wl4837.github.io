@@ -323,3 +323,8 @@ p{
 #video-div{
 	text-align: center;
 }
+a{
+	text-decoration: none;
+	color: coral;
+}
+
