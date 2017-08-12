@@ -6,11 +6,49 @@
 <title>wl4837</title>
 <link rel="stylesheet" href="style.css" />
 <style type="text/css">
+#bg-video{
+			position: fixed;
+			z-index: -9998;
+		}
+		video,#bg-video,html,body{
+			width: 100%;
+			height: 100%;
+		}
+		video{
+            position: fixed;
+            right: 0px;
+            bottom: 0px;
+            min-width: 100%;
+            min-height: 100%;
+            height: auto;
+            width: auto;
+            /*加滤镜*/
+            /*-webkit-filter: grayscale(100%);*/
+            /*filter:grayscale(100%);*/
+}
 </style>
 <script type="text/javascript">
 </script>
 </head>
 <body>
+<!--
+	作者：wl4837@163.com
+	时间：2017-08-12
+	描述：视屏背景
+-->
+<div id="bg-video">
+	<video autoplay="autoplay">
+		<source src="http://v4.music.126.net/20170813003907/c085e4f1ce11bd4e5a8ae927e8a7d548/web/cloudmusic/IDMhIDBlMCIwMSImMTUhIA==/mv/==/999/20140428131108/2371646581133190_720.mp4" type="video/mp4">
+		<source src="movie.ogg" type="video/ogg">
+		您的浏览器不支持 video 标签。
+	</video>	
+</div>
+	
+<!--
+	作者：wl4837@163.com
+	时间：2017-08-12
+	描述：开始页面
+-->
 <div id="header">
    <div id="logo">	
    </div>
@@ -22,6 +60,12 @@
    </div>
 </div>
 <!--
+	作者：wl4837@163.com
+	时间：2017-08-12
+	描述：这个div是下面内容背景
+-->
+<div id="bg-color">
+	<!--
 	时间：2017-08-12
 	描述：时间轴
 -->
@@ -88,12 +132,22 @@
 	</div>
 </section>
 
+<!--
+	作者：wl4837@163.com
+	时间：2017-08-12
+	描述：跳转Lofter
+-->
+
 <div id="add">
 	<div id="add-w">
 			<a href="http://wl4837.lofter.com/"><img src="http://www.easyicon.net/api/resizeApi.php?id=1205406&size=72" id="add-img" /></a>
 	</div>
 </div>
 
+<!--
+	作者：wl4837@163.com
+	时间：2017-08-12
+	描述：背景音乐暂不使用
 <div id="video-div">
 <video controls="" autoplay="" name="media">
 <source src="http://m10.music.126.net/20170812100514/e3bed094b3347b3815353f4484f3cf17/ymusic/d954/e04b/7398/0626131280c2db61f77e8a9cb5c4e217.mp3" type="audio/mpeg">
@@ -101,11 +155,20 @@
 </br>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=412902075&auto=0&height=66"></iframe>
 </div>
-<p>
+-->
+<!--
+	作者：wl4837@163.com
+	时间：2017-08-12
+	描述：底部列表
+-->
+<p style="color: #F0CA45;">
 友情链接:
-<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=904837700&site=qq&menu=yes">我的QQ</a>
-<a href="https://www.helloweba.com/">helloweba</a>
+	<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=904837700&site=qq&menu=yes">我的QQ</a>
+	<a href="https://www.helloweba.com/">helloweba</a>
 </p>
+
 </br>
+
+</div>
 </body>
 </html>
