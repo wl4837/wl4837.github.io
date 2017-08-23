@@ -343,3 +343,10 @@ a{
 #bg-color{
 	background-color: #7F8C97;
 }
+@media only screen and (max-width: 500px) {
+		#header-text-img{
+		width: 30%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
