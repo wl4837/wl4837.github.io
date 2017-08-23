@@ -344,10 +344,19 @@ a{
 #bg-color{
 	background-color: #7F8C97;
 }
-@media only screen and (max-width: 500px) {
-		#header-text-img{
-		width: 30%;
-		margin-left: auto;
-		margin-right: auto;
-	}
+@media only screen and (max-width: 700px) {
+	#header-text-img{
+	width: 30%;
+	margin-left: auto;
+	margin-right: auto;
+        }
+        font{
+        font-size:10px;
+        }
+	#logo{
+	width: 10%;
+	height:38%;
+	margin-left: auto;
+	margin-right: auto;
+        }
 }
