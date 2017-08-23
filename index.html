@@ -102,6 +102,34 @@ alert("您当前的窗口太小 无法加载 背景视频 如果你使用的是�
    <div id="header-text">
    	<div id="header-text-img">
    		<img  id="header-img" src="http://qlogo1.store.qq.com/qzone/904837700/904837700/100?1500788970" />
+		   <script>
+   			var a = 0;
+   			headerimg();
+   			function headerimg(){
+				setTimeout(function(){headerimg()},30);
+			switch (a){
+				case 0:
+				document.getElementById("header-img").style="border-color:cornflowerblue yellowgreen blueviolet deeppink";
+				a=1;
+				break;
+					
+				case 1:
+				document.getElementById("header-img").style="border-color:deeppink cornflowerblue yellowgreen blueviolet";
+				a=2;
+				break;
+				
+				case 2:
+				document.getElementById("header-img").style="border-color:blueviolet deeppink cornflowerblue yellowgreen ";
+				a=3;
+				break;
+				
+				default:
+				document.getElementById("header-img").style="border-color:yellowgreen blueviolet deeppink cornflowerblue ";
+				a=0;
+				break;
+			}
+		}
+   		</script>
    	</div>
 	   <p><font size="5" color="cyan"  face="微软雅黑">hello (微凉)wl4837</font></p>
 	   <p><font size="5" color="cyan"  face="微软雅黑">一只有理想的挨踢程序员</font></p>
@@ -183,28 +211,33 @@ alert("您当前的窗口太小 无法加载 背景视频 如果你使用的是�
 <!--
 	作者：wl4837@163.com
 	时间：2017-08-12
-	描述：跳转Lofter
+	描述：背景音乐
 -->
-
-<!--
-<div id="add">
-	<div id="add-w">
-			<a href="http://wl4837.lofter.com/"><img src="http://www.easyicon.net/api/resizeApi.php?id=1205406&size=72" id="add-img" /></a>
-	</div>
+<div id="video-div">
+<iframe id="bg-yy" frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=412902075&auto=0&height=66"></iframe>
 </div>
--->
 <!--
 	作者：wl4837@163.com
 	时间：2017-08-12
-	描述：背景音乐暂不使用
-<div id="video-div">
-<video controls="" autoplay="" name="media">
-<source src="http://m10.music.126.net/20170812100514/e3bed094b3347b3815353f4484f3cf17/ymusic/d954/e04b/7398/0626131280c2db61f77e8a9cb5c4e217.mp3" type="audio/mpeg">
-</video>
+	描述：底部列表
 -->
-</br>
-<iframe id="bg-yy" frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src=""></iframe>
-</div>
+
+<!--
+	作者：wl4837@163.com
+	时间：2017-08-12
+	描述：获取当前窗口大小 查看是否播放背景音乐
+-->
+<script type="text/javascript">
+var a=document.body.clientWidth; 
+var b=document.body.clientHeight; 
+if (a>850&&b>531) {
+	
+}
+else{
+	document.getElementById("bg-yy").src="//music.163.com/outchain/player?type=2&id=412902075&auto=1&height=66";
+}
+</script>
+
 <!--
 	作者：wl4837@163.com
 	时间：2017-08-12
