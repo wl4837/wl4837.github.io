@@ -293,9 +293,10 @@ body{
 }
 #header-img{
 	width: 100%;
-	border:1px;
-	border-style:groove;
-  	border-color:#ff0000 #0000ff;
+	border:2px;
+ 	border-color: cornflowerblue  yellowgreen blueviolet deeppink;
+ 	border-style: ridge;
+ 	border-radius: 360px;
 }
 #header-text-img{
 	width: 13%;
