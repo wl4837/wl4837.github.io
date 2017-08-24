@@ -280,8 +280,6 @@ a.cd-read-more:hover{text-decoration:none; background-color: #424242;  }
 #header{
 	width:100%;
 	height: 100%;
-	background-image: url(img/4.jpg);
-	background-size:auto 100%;
 }
 body{
 	margin: 0px;
@@ -361,4 +359,8 @@ a{
 	margin-left: auto;
 	margin-right: auto;
         }
+	 #header{
+   	background-image: url(http://sjbz.fd.zol-img.com.cn/t_s320x510c/g5/M00/0F/0B/ChMkJ1fJQ92IcwtuAAbooshQYcsAAU8BwGbcLgABui6717.jpg);
+	background-size:100% 100%;
+   }
 }
