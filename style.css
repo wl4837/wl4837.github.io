@@ -292,7 +292,7 @@ body{
 }
 #header-img{
   width: 100%;
-  border:10px;
+  border:5px;
   border-color: cornflowerblue  yellowgreen blueviolet deeppink;
   border-style: ridge;
   border-radius: 360px;
