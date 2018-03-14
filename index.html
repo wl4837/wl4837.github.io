@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			(function () {
+		        var ua = window.navigator.userAgent,
+		            agents = ['Android', 'iPhone', 'SymbianOS', 'Windows Phone', 'iPod'],
+		            isPC = true;
+		        for (var i = 0, len = agents.length; i < len; i++) {
+		          if (ua.indexOf(agents[i]) > 0) {
+		            isPC = false;
+		            break;
+		          }
+		        }
+		        if (!isPC) {
+	//	          var href = window.location.href.replace('www', 'm');
+		          window.location.href = "move.html";
+		        }else{
+		          window.location.href = "Desktop.html";
+		        }
+     		})
+		();
+		</script>
+		
+	</body>
+</html>

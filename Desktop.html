@@ -1,0 +1,101 @@
+<!--
+	作者：wl4837@163.com
+	时间：2018-03-14
+	描述：PC页面加载
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			/*背景样式*/
+			#bg-video{
+				width: 100%;
+				height: 100%;
+			}
+			#bg-video{
+				position: fixed;
+				z-index: -9998;
+			}
+			video,#bg-video,html,body{
+				width: 100%;
+				height: 100%;
+				margin: 0px;
+				padding: 0px;
+			}
+			video{
+	            position: fixed;
+	            right: 0px;
+	            bottom: 0px;
+	            min-width: 100%;
+	            min-height: 100%;
+	            height: auto;
+	            width: auto;
+	            /*加滤镜*/
+	            /*-webkit-filter: grayscale(100%);*/
+	            /*filter:grayscale(100%);*/
+			}
+			/*头部样式*/
+			#header{
+				width:100%;
+				height:200px;
+				position: absolute;
+				top: 35%;
+			}
+			#header_top_body{
+				height: 100%;
+				width: 100%;
+			}
+			/*内容信息*/
+			#content_info{
+				width: 100%;
+				height: 100%;
+				border-style: none;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<!--
+        	作者：wl4837@163.com
+        	时间：2018-03-14
+        	描述：视频背景样式
+        -->
+		<div id="bg-video">
+			<video autoplay="autoplay" loop="loop">
+				<source id="vi-add" src="https://ask.ivideo.sina.com.cn/v_play_ipad.php?vid=145939066">
+				<source src="movie.ogg" type="video/ogg">
+				您的浏览器不支持 video 标签。
+			</video>
+		</div>
+		
+		<!--
+        	作者：wl4837@163.com
+        	时间：2018-03-14
+        	描述：头像样式
+        -->
+		
+		<div id="header_top_body">
+			<center>
+				<div id="header">
+					<center>
+						<img src="http://39.106.109.84/userhead/1.png" width="200px" height="100%"/>
+						<div>
+							<p>wl4837</p>
+							<p>我的手上拿着一副烂牌，我得用心与命运赌博，不然将输掉整个人生。</p>
+						</div>
+					</center>
+				</div>
+				<div>
+				</div>
+			</center>
+		</div>
+		<!--
+        	作者：wl4837@163.com
+        	时间：2018-03-14
+        	描述：内容
+        -->
+		<iframe src="http://wl4837.lofter.com/" id="content_info"></iframe>
+	</body>
+</html>
