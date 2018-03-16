@@ -15,6 +15,7 @@
 				height: 100%;
 			}
 			#bg-video{
+				background-color:#000000;
 				position: fixed;
 				z-index: -9998;
 			}
@@ -38,7 +39,9 @@
 			}
 			/*头部样式*/
 			#header{
-				width:100%;
+				width:96%;
+				margin-left: 2%;
+				margin-right: 2%;
 				height:200px;
 				position: absolute;
 				top: 35%;
@@ -53,17 +56,108 @@
 				height: 100%;
 				border-style: none;
 			}
+			
+			#header{
+				/*border: 5px #FF0000 solid;*/
+				border-radius:60px;
+				/*box-shadow: 0px 0px 10px rgba(0,0,0,1.8);*/
+				transition-duration: 5s;
+				animation:MyHeader 2s infinite;
+			}
+			/*2D旋转*/
+			#header_img:hover{
+				transform:rotate(3600deg);
+				top:-60px;
+				width: 300px;
+				height: 300px;
+			}
+			/*文字特效*/
+			.Header_title{
+				font-weight: 500;
+				font-family: "微软雅黑";
+				font-size:20px;
+			  	text-rendering: optimizeLegibility;
+				color: fuchsia;
+				-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), color-stop(50%, rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+   				text-shadow: 0 0 1px rgba(0,0,0,0.5);
+				box-shadow: 0px 0px 10px rgba(0,0,0,1.8);
+				transition-duration: 0.5s;
+				animation:MyHeader_Title 2s infinite;
+			}
+			/*2D旋转*/
+			.Header_title:hover{
+				transform:rotateY(360deg);
+			}
+			#header_img{
+				position: relative;
+				top:-20px;
+				border-radius: 120px;
+				box-shadow: 0px 0px 10px rgba(0,0,0,1.8);
+				transition-duration:2s;
+				border:10px aquamarine solid;
+				/*定义动画名称MyHeader_img*/
+				animation:MyHeader_img 10s infinite;
+			}
+			/*3D旋转*/
+			/*#header_img:hover{
+				transform: skew(30deg);
+			}*/
+			@keyframes MyHeader_img{
+				0%   {border-color:#7FFFD4;left:0px;}
+				25%  {border-color:#FF00FF;left:30%;}
+				50%  {border-color:burlywood;left:0px;}
+				75%  {border-color:aqua; left:-30%;}
+				100% {border-color:red; left:0px;}
+			}
+			@keyframes MyHeader_Title{
+				0%   {color: #00FFFF;left:0px;}
+				25%  {color: #FF0000;left:30%;}
+				50%  {color: #blueviolet;left:0px;}
+				75%  {color: #DEB887; left:-30%;}
+				100% {color: #00FFFF; left:0px;}
+			}
+			/*@keyframes MyHeader{
+				0%   {border-color:#7FFFD4;}
+				25%  {border-color:#FF00FF;}
+				50%  {border-color:burlywood;}
+				75%  {border-color:aqua;}
+				100% {border-color:red;}
+			}*/
+			#mubu{
+				position: fixed;
+				top: 0px;
+				z-index: -9997;
+			}
+			#header_jdt{
+				border-radius: 120px;
+				position: relative;
+				top:93px;
+				height: 10px;
+				animation:MyHeader_addt 10s infinite;
+			}
+			@keyframes MyHeader_addt{
+				0%   {width:0%;background-color:#7FFFD4;}
+				25%  {width: 75%;transform: rotatex(360deg);background-color:#FF00FF;}
+				50%  {width:0%;background-color:burlywood;}
+				75%  {width: 75%;transform: rotatex(360deg);background-color:aqua;}
+				100% {width:0%;background-color:red;}
+			}
 		</style>
 	</head>
 	<body>
-		
+		<!--
+        	作者：wl4837@163.com
+        	时间：2018-03-14
+        	描述：视频幕布
+        -->
+		<div style="width:100%;height:100%;background-color: #000000;opacity:0.6;" id="mubu"></div>
 		<!--
         	作者：wl4837@163.com
         	时间：2018-03-14
         	描述：视频背景样式
         -->
 		<div id="bg-video">
-			<video autoplay="autoplay" loop="loop">
+			<video autoplay="autoplay" loop="loop" style="background-color: #000000;">
 				<source id="vi-add" src="https://ask.ivideo.sina.com.cn/v_play_ipad.php?vid=145939066">
 				<source src="movie.ogg" type="video/ogg">
 				您的浏览器不支持 video 标签。
@@ -80,10 +174,11 @@
 			<center>
 				<div id="header">
 					<center>
-						<img src="http://39.106.109.84/userhead/1.png" width="200px" height="100%"/>
+						<div style="background-color:#00FFFF;width: 100%;" id="header_jdt"></div>
+						<img src="img/QQ图片20180222130742.jpg" width="200px" height="100%" id="header_img" />
 						<div>
-							<p>wl4837</p>
-							<p>我的手上拿着一副烂牌，我得用心与命运赌博，不然将输掉整个人生。</p>
+							<p class="Header_title">wl4837</p>
+							<p class="Header_title">我的手上拿着一副烂牌，我得用心与命运赌博，不然将输掉整个人生。</p>
 						</div>
 					</center>
 				</div>
@@ -96,6 +191,6 @@
         	时间：2018-03-14
         	描述：内容
         -->
-		<iframe src="https://wl4837.lofter.com/"  id="content_info"></iframe>
+		<iframe src="https://www.cnblogs.com/wl4837/" id="content_info"></iframe>
 	</body>
 </html>
