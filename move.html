@@ -1,10 +1,156 @@
+<!--
+	作者：wl4837@163.com
+	时间：2018-03-14
+	描述：移动页面加载
+-->
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<style>
+			html,body{
+				width: 100%;
+				height: 100%;
+				margin: 0px;
+				padding: 0px;
+			}
+			/*头部样式*/
+			#header{
+				width:96%;
+				margin-left: 2%;
+				margin-right: 2%;
+				height:200px;
+				position: absolute;
+				top: 35%;
+			}
+			#header_top_body{
+				height: 100%;
+				width: 100%;
+			}
+			/*内容信息*/
+			#content_info{
+				width: 100%;
+				height:98%;
+				border-style: none;
+			}
+			
+			#header{
+				/*border: 5px #FF0000 solid;*/
+				border-radius:60px;
+				/*box-shadow: 0px 0px 10px rgba(0,0,0,1.8);*/
+				transition-duration: 5s;
+				animation:MyHeader 2s infinite;
+			}
+			/*2D旋转*/
+			#header_img:hover{
+				transform:rotate(3600deg);
+				top:-60px;
+			}
+			/*文字特效*/
+			.Header_title{
+				font-weight: 500;
+				font-family: "微软雅黑";
+				font-size:50px;
+			  	text-rendering: optimizeLegibility;
+				color: fuchsia;
+				-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), color-stop(50%, rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+   				text-shadow: 0 0 1px rgba(0,0,0,0.5);
+				box-shadow: 0px 0px 10px rgba(0,0,0,1.8);
+				transition-duration: 0.5s;
+				animation:MyHeader_Title 2s infinite;
+			}
+			/*2D旋转*/
+			.Header_title:hover{
+				transform:rotateY(360deg);
+			}
+			#header_img{
+				position: relative;
+				top:-20px;
+				border-radius: 360px;
+				box-shadow: 0px 0px 10px rgba(0,0,0,1.8);
+				transition-duration:2s;
+				border:10px aquamarine solid;
+				/*定义动画名称MyHeader_img*/
+				animation:MyHeader_img 3s infinite;
+			}
+			/*3D旋转*/
+			/*#header_img:hover{
+				transform: skew(30deg);
+			}*/
+			@keyframes MyHeader_img{
+				0%   {border-color:#7FFFD4;width: 40%;}
+				25%  {border-color:#FF00FF;width: 30%;}
+				50%  {border-color:burlywood;width: 40%;}
+				75%  {border-color:aqua; width: 30%;}
+				100% {border-color:red;width: 40%;}
+			}
+			@keyframes MyHeader_Title{
+				0%   {color: #00FFFF;left:0px;}
+				25%  {color: #FF0000;left:30%;}
+				50%  {color: #blueviolet;left:0px;}
+				75%  {color: #DEB887; left:-30%;}
+				100% {color: #00FFFF; left:0px;}
+			}
+			/*@keyframes MyHeader{
+				0%   {border-color:#7FFFD4;}
+				25%  {border-color:#FF00FF;}
+				50%  {border-color:burlywood;}
+				75%  {border-color:aqua;}
+				100% {border-color:red;}
+			}*/
+			#mubu{
+				background-image: url(img/QQ图片20180222130742.jpg);
+				background-size: 100% 100%;
+				position: fixed;
+				top: 0px;
+				z-index: -9997;
+			}
+		</style>
 	</head>
 	<body>
+		<div style="font-size:40px;position: fixed;width: 100%;">
+			<p>此页面不展示任何内容,请使用pc机访问 !</p>
+		</div>
+		<!--
+        	作者：wl4837@163.com
+        	时间：2018-03-14
+        	描述：视频幕布
+        -->
+		<div style="width:100%;height:100%;background-color: #000000;opacity:0.6;" id="mubu"></div>		
+		<!--
+        	作者：wl4837@163.com
+        	时间：2018-03-14
+        	描述：头像样式
+        -->
 		
+		<div id="header_top_body">
+			<center>
+				<div id="header">
+					<center>
+						<img src="img/QQ图片20180222130742.jpg" width="30%" height="100%" id="header_img" />
+						<div>
+							<p class="Header_title">wl4837</p>
+							<p class="Header_title">我的手上拿着一副烂牌，我得用心与命运赌博，不然将输掉整个人生。</p>						</div>
+					</center>
+				</div>
+				<div>
+				</div>
+			</center>
+		</div>
+		<!--
+        	作者：wl4837@163.com
+        	时间：2018-03-14
+        	描述：内容
+     	-->
+     	<div style="position: fixed;bottom: 0px;width: 100%;">
+     		<div style="width: 100%;">
+     		<center>
+     			<span class="Header_title">联系我:QQ904837700</span>
+     			<br /><br />
+				<span class="Header_title">邮箱:wl4837@163.com</span>
+     		</center>
+     		</div>
+     	</div>
 	</body>
 </html>
